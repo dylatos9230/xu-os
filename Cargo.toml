@@ -5,5 +5,12 @@ authors = ["estraining <dylatos2022@gmail.com>"]
 edition = "2018"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+# Disable unwinding
+[profile.dev]
+panic = "abort"
+[profile.release]
+panic = "abort"
 
 [dependencies]
+bootloader = "0.9.3"
+volatile = "0.2.6"
